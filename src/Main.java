@@ -3,13 +3,14 @@ import java.util.Arrays;
 public class Easy {
 
     public static int calculateTheAverageSalary() {
-        int sum = 0;
-        for (Employee employee : employees) ;
-        {
-            sum += employees.getSalary();
-        }
-        var result = (double) sum / employees.length;
-        System.out.println(" среднее значение трат составило" + sum + " рублей");
+        double average = 0;
+        if (employees.length>0)
+        { double sum = 0;
+            for (int i = 0; i < employees.length; i++){
+                sum += employees[i];}
+            average = sum/employees.length;}
+        String result = String.format ("%. 2f", average);
+        System.out.println(" среднее значение зарплат составило" + average + " рублей");
     }
 
 
@@ -19,7 +20,7 @@ public class Easy {
             sum += employees.getSalary(); }
         return sum;
 
-    System.out.println("Сумма зарплаты всех сотрудников состаляет" + "рублей"); }
+    System.out.println("Сумма зарплаты всех сотрудников состаляет" + sum + "рублей"); }
 
 
     public static void printEmployees(){
@@ -87,7 +88,7 @@ public class Easy {
         printEmployees();
         findEmployeeWithMinSalary(minSalary);
         findEmployeeWithMaxSalary(maxSalary);
-        calculateTheAverageSalary(sum);
+        calculateTheAverageSalary(average);
 
 
 
