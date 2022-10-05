@@ -2,6 +2,16 @@ import java.util.Arrays;
 
 public class Easy {
 
+    public static int calculateTheAverageSalary() {
+        int sum = 0;
+        for (Employee employee : employees) ;
+        {
+            sum += employees.getSalary();
+        }
+        var result = (double) sum / employees.length;
+        System.out.println(" среднее значение трат составило" + sum + " рублей");
+    }
+
 
     public static int calculateTotalSalary() {
         int sum = 0;
@@ -77,6 +87,7 @@ public class Easy {
         printEmployees();
         findEmployeeWithMinSalary(minSalary);
         findEmployeeWithMaxSalary(maxSalary);
+        calculateTheAverageSalary(sum);
 
 
 
